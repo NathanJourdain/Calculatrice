@@ -1,0 +1,108 @@
+*,::before,::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(55, 111, 148);
+    display: flex;
+    flex-direction:column ;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.title{
+    font-size:40px ;
+    color: #f1f1f1;
+    text-shadow: 4px -4px black;
+    text-transform: uppercase;
+    padding: 40px;
+}
+
+.container-calc{
+    display: flex;
+    flex-direction: column;
+}
+
+.header-calc{
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-calc .theme{
+    display: flex;
+    flex-direction: row ;
+    align-items: center;
+}
+
+.container-calc .contain-btn{
+    max-width: 1000px;
+    width: 80vw;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+    background-color: rgb(5, 62, 100);
+    padding: 25px;
+    border-radius: 0 0 25px 25px;
+    box-shadow: 1px 1px 10px beige;
+}
+.container-calc .contain-btn #reset{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.container-calc .contain-btn #equal{
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.container-calc .contain-btn button{
+    background-color: transparent;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    box-shadow: 0 0 5px rgb(55, 111, 148);
+    color: white;
+    transition: background-color 0.2s,
+                transform 0.1s;
+    cursor: pointer;
+}
+.container-calc .contain-btn button:hover{
+    background-color: rgb(55, 111, 148);
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    box-shadow: 0 0 3px #000;
+}
+.container-calc .contain-btn button:active{
+    transform: scale(0.8);
+}
+
+.container-calc .contain-btn button.active{
+    background-color: rgb(3, 146, 241);
+}
+
+/* resulat */
+.result{
+    max-width: 1000px;
+    min-height: 150px ;
+    width: 80vw;
+    color: white;
+    background-color: rgb(5, 62, 100);
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+    padding: 35px;
+    text-align: right;
+    font-size: 60px;
+    font-weight: bold;
+    overflow-wrap: break-word ;
+    z-index: 2;
+    box-shadow: 1px 1px 10px beige;
+        
+}
